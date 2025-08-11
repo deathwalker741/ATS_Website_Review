@@ -53,7 +53,9 @@ export function FloatingRegisterButton() {
 
   if (!isVisible) return null
 
-  console.log('FloatingRegisterButton rendering:', { isVisible })
+  if (process.env.NODE_ENV !== 'production') {
+    console.log('FloatingRegisterButton rendering:', { isVisible })
+  }
 
   return (
     <>

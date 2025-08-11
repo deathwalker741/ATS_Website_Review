@@ -7,21 +7,27 @@ export function GiftednessWithVideo() {
   const [isLoading, setIsLoading] = useState(true)
 
   const handleVideoError = () => {
-    console.log('Video error occurred')
+    if (process.env.NODE_ENV !== 'production') {
+      console.log('Video error occurred')
+    }
     setVideoError(true)
     setIsLoading(false)
   }
 
   const handleVideoLoad = () => {
-    console.log('Video loaded successfully')
+    if (process.env.NODE_ENV !== 'production') {
+      console.log('Video loaded successfully')
+    }
     setIsLoading(false)
   }
 
   // Force hide loading after 3 seconds as fallback
   React.useEffect(() => {
     const timer = setTimeout(() => {
-      if (isLoading) {
-        console.log('Forcing loading to false after timeout')
+        if (isLoading) {
+          if (process.env.NODE_ENV !== 'production') {
+            console.log('Forcing loading to false after timeout')
+          }
         setIsLoading(false)
       }
     }, 3000)

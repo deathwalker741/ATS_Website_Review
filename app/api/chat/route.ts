@@ -36,7 +36,9 @@ export async function POST(request: NextRequest) {
     const openaiKey = process.env.OPENAI_API_KEY
     
     if (!openaiKey) {
-      console.warn('OpenAI API key not configured, using fallback responses')
+      if (process.env.NODE_ENV !== 'production') {
+        console.warn('OpenAI API key not configured, using fallback responses')
+      }
       const fallbackResponse = generateFallbackResponse(userMessage, isInternational)
       console.log('Generated fallback response for:', userMessage.substring(0, 50) + '...')
       return NextResponse.json({
@@ -61,7 +63,9 @@ export async function POST(request: NextRequest) {
       })
 
       if (!response.ok) {
-        console.warn(`OpenAI API error: ${response.status} ${response.statusText}`)
+        if (process.env.NODE_ENV !== 'production') {
+          console.warn(`OpenAI API error: ${response.status} ${response.statusText}`)
+        }
         const fallbackResponse = generateFallbackResponse(userMessage, isInternational)
         return NextResponse.json({
           response: fallbackResponse
@@ -75,7 +79,9 @@ export async function POST(request: NextRequest) {
         response: aiResponse
       })
     } catch (apiError) {
-      console.warn('OpenAI API request failed, using fallback')
+      if (process.env.NODE_ENV !== 'production') {
+        console.warn('OpenAI API request failed, using fallback')
+      }
       const fallbackResponse = generateFallbackResponse(userMessage, isInternational)
       return NextResponse.json({
         response: fallbackResponse

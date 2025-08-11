@@ -32,10 +32,7 @@ export async function GET(request: NextRequest) {
 
     // Check if database is available
     if (!process.env.DB_SCHOOL_PASSWORD) {
-      return NextResponse.json(
-        { error: 'Service temporarily unavailable. Please try again later.' },
-        { status: 503 }
-      )
+      return NextResponse.json({ error: 'Service temporarily unavailable.' }, { status: 503 })
     }
 
     // Get school info
@@ -46,17 +43,7 @@ export async function GET(request: NextRequest) {
     `
     let schoolResults: any[] = []
     
-    try {
-      schoolResults = await executeQuery(schoolQuery, [schoolCode], 'school') as any[]
-    } catch (error) {
-      console.error('Database connection failed for school info:', error)
-      // Provide fallback school info
-      schoolResults = [{
-        schoolno: schoolCode,
-        schoolname: `School ${schoolCode}`,
-        city: 'City Information Unavailable'
-      }]
-    }
+    schoolResults = await executeQuery(schoolQuery, [schoolCode], 'school') as any[]
     
     const schoolInfo = schoolResults[0] || { 
       schoolno: schoolCode, 
@@ -75,13 +62,7 @@ export async function GET(request: NextRequest) {
     `
     
     let currentYearResults: any[] = []
-    try {
-      currentYearResults = await executeQuery(currentYearQuery, [schoolCode], 'school') as any[]
-    } catch (error) {
-      console.error('Database connection failed for current year stats:', error)
-      // Provide fallback stats
-      currentYearResults = [{ totalQualifiers: 0, successfulPayments: 0 }]
-    }
+    currentYearResults = await executeQuery(currentYearQuery, [schoolCode], 'school') as any[]
     const currentYear = currentYearResults[0] || { totalQualifiers: 0, successfulPayments: 0 }
 
     // Get last year stats (2024)
@@ -95,13 +76,7 @@ export async function GET(request: NextRequest) {
     `
     
     let lastYearResults: any[] = []
-    try {
-      lastYearResults = await executeQuery(lastYearQuery, [schoolCode], 'school') as any[]
-    } catch (error) {
-      console.error('Database connection failed for last year stats:', error)
-      // Provide fallback stats
-      lastYearResults = [{ totalQualifiers: 0, successfulPayments: 0 }]
-    }
+    lastYearResults = await executeQuery(lastYearQuery, [schoolCode], 'school') as any[]
     const lastYear = lastYearResults[0] || { totalQualifiers: 0, successfulPayments: 0 }
 
     // Calculate percentages

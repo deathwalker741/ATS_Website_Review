@@ -6,16 +6,16 @@ Create a `.env.local` file in your project root with the following variables:
 
 ```bash
 # Database Configuration for ATS Website (forms, chat storage)
-DB_ATS_HOST=172.16.12.83
+DB_ATS_HOST=your_ats_db_host
 DB_ATS_PORT=3306
 DB_ATS_USER=appuser
-DB_ATS_PASSWORD=App#uSer#2024
+DB_ATS_PASSWORD=your_ats_database_password_here
 DB_ATS_DATABASE=ats_website
 
 # Database Configuration for School Admin Login (legacy system)
-DB_SCHOOL_HOST=10.0.6.122
+DB_SCHOOL_HOST=your_school_db_host
 DB_SCHOOL_PORT=3306
-DB_SCHOOL_USER=bindu.pillai1
+DB_SCHOOL_USER=your_school_db_user
 DB_SCHOOL_PASSWORD=your_school_password_here
 DB_SCHOOL_DATABASE=educatio_educat
 
@@ -26,15 +26,14 @@ SCHOOL_AUTH_PASSWORD=your_secure_school_password_here
 # OpenAI API Configuration (Optional - for AI chatbot)
 OPENAI_API_KEY=your_openai_api_key_here
 
-# Next.js Environment
+# Next.js Environment (set to production in production deployments)
 NODE_ENV=development
 ```
 
 ## 🚨 **IMPORTANT NOTES**
 
 ### **Database Password**
-- The `DB_ATS_PASSWORD=App#uSer#2024` is the correct password for the ATS website database
-- This must be set exactly as shown for the chat storage to work
+- Do not store or share real passwords in documentation. Obtain credentials securely.
 
 ### **JWT Secret**
 - Generate a strong JWT secret (minimum 32 characters)
@@ -56,7 +55,7 @@ NODE_ENV=development
 ```
 Error: Access denied for user 'appuser'@'...' (using password: YES)
 ```
-**Solution:** Ensure `DB_ATS_PASSWORD=App#uSer#2024` is set correctly in `.env.local`
+**Solution:** Ensure `DB_ATS_PASSWORD` is set correctly in `.env.local`
 
 ### **Chat Health Check Failing**
 ```

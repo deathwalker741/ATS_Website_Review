@@ -1,16 +1,8 @@
 -- Chat Storage Database Tables for Ei ATS
--- Database: ats_website
--- Host: 172.16.12.83
--- User: appuser
--- Password: App#uSer#2024
--- 
--- Run this script to create the necessary tables for chat storage in the ats_website database
--- 
--- Usage:
--- mysql -h 172.16.12.83 -u appuser -p ats_website < scripts/create-chat-tables.sql
--- Enter password: App#uSer#2024
+-- NOTE: Do not hardcode or share credentials in this file. Use environment variables and secure secrets management.
 
-USE ats_website;
+-- Ensure you're connected to the correct database before running this script
+-- Example: USE ats_website;
 
 -- Table for storing individual chat messages
 CREATE TABLE IF NOT EXISTS chat_messages (

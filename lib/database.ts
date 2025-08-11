@@ -2,9 +2,9 @@ import mysql from 'mysql2/promise'
 
 // Database configuration for ATS Website (forms, general data)
 const atsWebsiteConfig = {
-  host: process.env.DB_ATS_HOST || '172.16.12.83',
+  host: process.env.DB_ATS_HOST,
   port: parseInt(process.env.DB_ATS_PORT || '3306'),
-  user: process.env.DB_ATS_USER || 'appuser',
+  user: process.env.DB_ATS_USER,
   password: process.env.DB_ATS_PASSWORD,
   database: process.env.DB_ATS_DATABASE || 'ats_website',
   charset: 'utf8mb4',
@@ -18,9 +18,9 @@ const atsWebsiteConfig = {
 
 // Database configuration for School Admin Login (legacy system)
 const schoolAdminConfig = {
-  host: process.env.DB_SCHOOL_HOST || '10.0.6.122',
+  host: process.env.DB_SCHOOL_HOST,
   port: parseInt(process.env.DB_SCHOOL_PORT || '3306'),
-  user: process.env.DB_SCHOOL_USER || 'bindu.pillai1',
+  user: process.env.DB_SCHOOL_USER,
   password: process.env.DB_SCHOOL_PASSWORD,
   database: process.env.DB_SCHOOL_DATABASE || 'educatio_educat',
   charset: 'utf8mb4',

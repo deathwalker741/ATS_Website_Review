@@ -9,17 +9,17 @@ console.log('🔧 ATS Website Environment Setup Helper\n');
 console.log('📝 Add these environment variables to your .env.local file:\n');
 
 console.log('# Database Configuration for ATS Website (forms, chat storage)');
-console.log('DB_ATS_HOST=172.16.12.83');
+console.log('DB_ATS_HOST=your_ats_db_host');
 console.log('DB_ATS_PORT=3306');
-console.log('DB_ATS_USER=appuser');
+console.log('DB_ATS_USER=your_ats_db_user');
 console.log('DB_ATS_PASSWORD=your_ats_database_password_here');
 console.log('DB_ATS_DATABASE=ats_website');
 console.log('');
 
 console.log('# Database Configuration for School Admin Login (legacy system)');
-console.log('DB_SCHOOL_HOST=10.0.6.122');
+console.log('DB_SCHOOL_HOST=your_school_db_host');
 console.log('DB_SCHOOL_PORT=3306');
-console.log('DB_SCHOOL_USER=bindu.pillai1');
+console.log('DB_SCHOOL_USER=your_school_db_user');
 console.log('DB_SCHOOL_PASSWORD=your_school_password_here');
 console.log('DB_SCHOOL_DATABASE=educatio_educat');
 console.log('');

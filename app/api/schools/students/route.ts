@@ -32,10 +32,7 @@ export async function GET(request: NextRequest) {
 
     // Check if database is available
     if (!process.env.DB_SCHOOL_PASSWORD) {
-      return NextResponse.json(
-        { error: 'Service temporarily unavailable. Please try again later.' },
-        { status: 503 }
-      )
+      return NextResponse.json({ error: 'Service temporarily unavailable.' }, { status: 503 })
     }
 
     // Get detailed student data

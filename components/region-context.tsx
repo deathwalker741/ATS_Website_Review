@@ -19,19 +19,27 @@ export function RegionProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     try {
       const stored = typeof window !== "undefined" ? localStorage.getItem("ats_region") : null
-      console.log("Loading region from localStorage:", stored)
+      if (process.env.NODE_ENV !== 'production') {
+        console.log("Loading region from localStorage:", stored)
+      }
       if (stored === "IND" || stored === "INT") {
-        console.log("Setting region to stored value:", stored)
+        if (process.env.NODE_ENV !== 'production') {
+          console.log("Setting region to stored value:", stored)
+        }
         setRegion(stored)
       } else {
         // Default to IND without IP lookup to avoid chunk loading issues
-        console.log("No stored region, defaulting to IND")
+        if (process.env.NODE_ENV !== 'production') {
+          console.log("No stored region, defaulting to IND")
+        }
         setRegion("IND")
         localStorage.setItem("ats_region", "IND")
       }
       setIsLoading(false)
     } catch (error) {
-      console.log("Region detection error, defaulting to IND:", error)
+      if (process.env.NODE_ENV !== 'production') {
+        console.log("Region detection error, defaulting to IND:", error)
+      }
       setRegion("IND")
       setIsLoading(false)
     }
@@ -39,17 +47,25 @@ export function RegionProvider({ children }: { children: React.ReactNode }) {
 
   // Debug region changes
   useEffect(() => {
-    console.log("Region changed to:", region)
+    if (process.env.NODE_ENV !== 'production') {
+      console.log("Region changed to:", region)
+    }
   }, [region])
 
   const toggleRegion = () => {
-    console.log("Toggle region called, current region:", region)
+    if (process.env.NODE_ENV !== 'production') {
+      console.log("Toggle region called, current region:", region)
+    }
     setRegion((prev) => {
       const next = prev === "IND" ? "INT" : "IND"
-      console.log("Switching from", prev, "to", next)
+      if (process.env.NODE_ENV !== 'production') {
+        console.log("Switching from", prev, "to", next)
+      }
       if (typeof window !== "undefined") {
         localStorage.setItem("ats_region", next)
-        console.log("Saved to localStorage:", next)
+        if (process.env.NODE_ENV !== 'production') {
+          console.log("Saved to localStorage:", next)
+        }
       }
       return next
     })

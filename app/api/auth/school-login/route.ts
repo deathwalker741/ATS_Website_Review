@@ -40,18 +40,7 @@ export async function POST(request: NextRequest) {
     
     let schoolResults: any[] = []
     
-    try {
-      schoolResults = await executeQuery(schoolQuery, [schoolCode], 'school') as any[]
-    } catch (error) {
-      console.error('Database connection failed:', error)
-      // For testing purposes, allow login even if database is not accessible
-      // In production, this should be removed
-      schoolResults = [{
-        schoolno: schoolCode,
-        schoolname: `School ${schoolCode}`,
-        city: 'City Information Unavailable'
-      }]
-    }
+    schoolResults = await executeQuery(schoolQuery, [schoolCode], 'school') as any[]
 
     // Handle database connection issues gracefully
     if (schoolResults.length === 0) {
@@ -61,14 +50,11 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Use "ats2025" as the password for all schools
-    const validPassword = password === "ats2025"
+    // Validate against configured school auth password
+    const validPassword = password === getSchoolAuthPassword()
 
     if (!validPassword) {
-      return NextResponse.json(
-        { error: 'Invalid password. Please use: ats2025' },
-        { status: 401 }
-      )
+      return NextResponse.json({ error: 'Invalid credentials' }, { status: 401 })
     }
 
     const schoolInfo = schoolResults[0]

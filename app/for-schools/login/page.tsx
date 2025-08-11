@@ -130,7 +130,7 @@ export default function SchoolLoginPage() {
                 <p><strong>Login Instructions:</strong></p>
                 <ul className="list-disc list-inside space-y-1 text-xs">
                   <li>Use your school code as username</li>
-                  <li>Password for all schools: <strong>ats2025</strong></li>
+                  <li>Password will be communicated by Ei (do not share).</li>
                 </ul>
               </div>
             </div>

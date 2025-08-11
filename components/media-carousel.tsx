@@ -161,7 +161,9 @@ export function MediaCarousel() {
 
   // Debug: Log which video is currently playing
   useEffect(() => {
-    console.log(`🎬 Now playing: Video ${currentIndex + 1} - "${currentItem?.title}"`)
+    if (process.env.NODE_ENV !== 'production') {
+      console.log(`🎬 Now playing: Video ${currentIndex + 1} - "${currentItem?.title}"`)
+    }
   }, [currentIndex, currentItem?.title])
 
   // Safety check - don't render if currentItem is undefined
@@ -294,19 +296,25 @@ export function MediaCarousel() {
   // Handle YouTube video end event for auto-advance
   useEffect(() => {
     if (currentItem?.type === "youtube") {
-      console.log(`🎬 Setting up YouTube end detection for: "${currentItem?.title}"`)
+      if (process.env.NODE_ENV !== 'production') {
+        console.log(`🎬 Setting up YouTube end detection for: "${currentItem?.title}"`)
+      }
       
       // For YouTube videos, we need to listen for messages from the iframe
       const handleMessage = (event: MessageEvent) => {
         if (event.origin !== 'https://www.youtube.com') return
         
         if (event.data && typeof event.data === 'object') {
-          console.log('📡 YouTube message received:', event.data)
+          if (process.env.NODE_ENV !== 'production') {
+            console.log('📡 YouTube message received:', event.data)
+          }
           
           // YouTube sends various events, we're interested in when video ends
           if (event.data.event === 'onStateChange' && event.data.info === 0) {
             // Video ended (state 0 = ended)
-            console.log('✅ YouTube video ended, advancing to next')
+            if (process.env.NODE_ENV !== 'production') {
+              console.log('✅ YouTube video ended, advancing to next')
+            }
             nextSlide()
           }
         }
@@ -315,7 +323,9 @@ export function MediaCarousel() {
       window.addEventListener('message', handleMessage)
       
       return () => {
-        console.log('🧹 Cleaning up YouTube message listener')
+        if (process.env.NODE_ENV !== 'production') {
+          console.log('🧹 Cleaning up YouTube message listener')
+        }
         window.removeEventListener('message', handleMessage)
       }
     }
@@ -467,7 +477,9 @@ export function MediaCarousel() {
                     title={currentItem?.title}
                     onLoad={() => {
                       // YouTube iframe loaded
-                      console.log('YouTube iframe loaded for:', currentItem?.title)
+                      if (process.env.NODE_ENV !== 'production') {
+                        console.log('YouTube iframe loaded for:', currentItem?.title)
+                      }
                     }}
                   />
                 ) : (
