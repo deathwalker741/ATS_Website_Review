@@ -1,0 +1,742 @@
+{
+  "summary": {
+    "totalComponents": 22,
+    "migratedComponents": 11,
+    "componentsNeedingMigration": 11,
+    "missingComponents": 0,
+    "totalPages": 8,
+    "migratedPages": 0,
+    "pagesNeedingMigration": 8,
+    "availableHooks": 11,
+    "missingHooks": 0,
+    "hardcodedContentFiles": 22
+  },
+  "details": {
+    "components": {
+      "migrated": [
+        {
+          "name": "hero-section.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true
+        },
+        {
+          "name": "about-section.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true
+        },
+        {
+          "name": "exam-info.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true
+        },
+        {
+          "name": "testimonials-carousel.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true
+        },
+        {
+          "name": "faq-section.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true
+        },
+        {
+          "name": "contact-section.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true
+        },
+        {
+          "name": "footer.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true
+        },
+        {
+          "name": "header.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true
+        },
+        {
+          "name": "notification-bar.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true
+        },
+        {
+          "name": "partners-carousel.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true
+        },
+        {
+          "name": "rewards-section.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": false
+        }
+      ],
+      "needsMigration": [
+        {
+          "name": "srr-video-section.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": false,
+          "noContentHook": true
+        },
+        {
+          "name": "search-dialog.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true,
+          "noContentHook": true
+        },
+        {
+          "name": "intelligent-chatbot.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true,
+          "noContentHook": true
+        },
+        {
+          "name": "alumni-cta.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true,
+          "noContentHook": true
+        },
+        {
+          "name": "giftedness-section.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": false,
+          "noContentHook": true
+        },
+        {
+          "name": "media-carousel.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true,
+          "noContentHook": true
+        },
+        {
+          "name": "history-section.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": true,
+          "noContentHook": true
+        },
+        {
+          "name": "roadmap-section.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": false,
+          "noContentHook": true
+        },
+        {
+          "name": "giftedness-with-video.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": false,
+          "noContentHook": true
+        },
+        {
+          "name": "back-to-top.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": false,
+          "noContentHook": true
+        },
+        {
+          "name": "floating-chat.tsx",
+          "hasUseClient": true,
+          "hasHardcodedContent": false,
+          "noContentHook": true
+        }
+      ],
+      "missing": [],
+      "issues": []
+    },
+    "hooks": {
+      "available": [
+        "useHeroContentHybrid",
+        "useAboutContentHybrid",
+        "useExamContentHybrid",
+        "useProgramsContentHybrid",
+        "useTestimonialsContentHybrid",
+        "useFAQContentHybrid",
+        "useContactContentHybrid",
+        "useFooterContentHybrid",
+        "useNavigationContentHybrid",
+        "useNotificationsContentHybrid",
+        "useRewardsContentHybrid"
+      ],
+      "missing": [],
+      "legacy": [
+        "useContent()",
+        "useHeroContent()",
+        "useExamContent()",
+        "useTestimonialsContent()",
+        "useFAQContent()",
+        "useContactContent()",
+        "useFooterContent()",
+        "useNavigationContent()",
+        "useNotificationsContent()",
+        "useProgramsContent()",
+        "useRewardsContent()"
+      ],
+      "issues": []
+    },
+    "pages": {
+      "migrated": [],
+      "needsMigration": [
+        {
+          "name": "page.tsx",
+          "hasHardcodedContent": true,
+          "noContentHook": true
+        },
+        {
+          "name": "contact/page.tsx",
+          "hasHardcodedContent": true,
+          "noContentHook": true
+        },
+        {
+          "name": "for-parents/page.tsx",
+          "hasHardcodedContent": true,
+          "noContentHook": true
+        },
+        {
+          "name": "for-schools/page.tsx",
+          "hasHardcodedContent": true,
+          "noContentHook": true
+        },
+        {
+          "name": "for-students/page.tsx",
+          "hasHardcodedContent": false,
+          "noContentHook": true
+        },
+        {
+          "name": "programmes/page.tsx",
+          "hasHardcodedContent": true,
+          "noContentHook": true
+        },
+        {
+          "name": "resources/page.tsx",
+          "hasHardcodedContent": true,
+          "noContentHook": true
+        },
+        {
+          "name": "schedule-call/page.tsx",
+          "hasHardcodedContent": true,
+          "noContentHook": true
+        }
+      ],
+      "missing": [],
+      "issues": []
+    },
+    "hardcodedContent": [
+      {
+        "file": "hero-section.tsx",
+        "type": "component",
+        "patterns": [
+          "\"[^\"]*Johns Hopkins[^\"]*\"",
+          "\"[^\"]*UC Berkeley[^\"]*\"",
+          "\"[^\"]*Northwestern[^\"]*\"",
+          "\"[^\"]*Purdue[^\"]*\"",
+          "\"[^\"]*SIG[^\"]*\"",
+          "\"[^\"]*GenWise[^\"]*\""
+        ]
+      },
+      {
+        "file": "about-section.tsx",
+        "type": "component",
+        "patterns": [
+          "\"[^\"]*Ei ATS[^\"]*\"",
+          "\"[^\"]*ASSET[^\"]*\"",
+          "\"[^\"]*Talent Search[^\"]*\"",
+          "\"[^\"]*exam[^\"]*\"",
+          "\"[^\"]*eligibility[^\"]*\""
+        ]
+      },
+      {
+        "file": "exam-info.tsx",
+        "type": "component",
+        "patterns": [
+          "\"[^\"]*registration[^\"]*\"",
+          "\"[^\"]*exam[^\"]*\"",
+          "\"[^\"]*fees[^\"]*\""
+        ]
+      },
+      {
+        "file": "testimonials-carousel.tsx",
+        "type": "component",
+        "patterns": []
+      },
+      {
+        "file": "faq-section.tsx",
+        "type": "component",
+        "patterns": []
+      },
+      {
+        "file": "contact-section.tsx",
+        "type": "component",
+        "patterns": [
+          "\"[^\"]*registration[^\"]*\""
+        ]
+      },
+      {
+        "file": "footer.tsx",
+        "type": "component",
+        "patterns": [
+          "\"[^\"]*Talent Search[^\"]*\"",
+          "\"[^\"]*registration[^\"]*\""
+        ]
+      },
+      {
+        "file": "header.tsx",
+        "type": "component",
+        "patterns": [
+          "\"[^\"]*Talent Search[^\"]*\"",
+          "\"[^\"]*registration[^\"]*\""
+        ]
+      },
+      {
+        "file": "notification-bar.tsx",
+        "type": "component",
+        "patterns": [
+          "\"[^\"]*registration[^\"]*\""
+        ]
+      },
+      {
+        "file": "partners-carousel.tsx",
+        "type": "component",
+        "patterns": [
+          "\"[^\"]*Talent Search[^\"]*\"",
+          "\"[^\"]*Johns Hopkins[^\"]*\"",
+          "\"[^\"]*UC Berkeley[^\"]*\"",
+          "\"[^\"]*Northwestern[^\"]*\"",
+          "\"[^\"]*Purdue[^\"]*\"",
+          "\"[^\"]*SIG[^\"]*\""
+        ]
+      },
+      {
+        "file": "search-dialog.tsx",
+        "type": "component",
+        "patterns": [
+          "\"[^\"]*Ei ATS[^\"]*\"",
+          "\"[^\"]*ASSET[^\"]*\"",
+          "\"[^\"]*Talent Search[^\"]*\"",
+          "\"[^\"]*Johns Hopkins[^\"]*\"",
+          "\"[^\"]*UC Berkeley[^\"]*\"",
+          "\"[^\"]*Northwestern[^\"]*\"",
+          "\"[^\"]*Purdue[^\"]*\"",
+          "\"[^\"]*SIG[^\"]*\"",
+          "\"[^\"]*GenWise[^\"]*\"",
+          "\"[^\"]*registration[^\"]*\"",
+          "\"[^\"]*exam[^\"]*\"",
+          "\"[^\"]*fees[^\"]*\"",
+          "\"[^\"]*eligibility[^\"]*\""
+        ]
+      },
+      {
+        "file": "intelligent-chatbot.tsx",
+        "type": "component",
+        "patterns": [
+          "\"[^\"]*Ei ATS[^\"]*\"",
+          "\"[^\"]*Talent Search[^\"]*\"",
+          "\"[^\"]*registration[^\"]*\""
+        ]
+      },
+      {
+        "file": "alumni-cta.tsx",
+        "type": "component",
+        "patterns": []
+      },
+      {
+        "file": "media-carousel.tsx",
+        "type": "component",
+        "patterns": [
+          "\"[^\"]*ASSET[^\"]*\"",
+          "\"[^\"]*Talent Search[^\"]*\"",
+          "\"[^\"]*Johns Hopkins[^\"]*\"",
+          "\"[^\"]*Northwestern[^\"]*\""
+        ]
+      },
+      {
+        "file": "history-section.tsx",
+        "type": "component",
+        "patterns": [
+          "\"[^\"]*Ei ATS[^\"]*\"",
+          "\"[^\"]*UC Berkeley[^\"]*\"",
+          "\"[^\"]*Purdue[^\"]*\"",
+          "\"[^\"]*SIG[^\"]*\"",
+          "\"[^\"]*GenWise[^\"]*\"",
+          "\"[^\"]*registration[^\"]*\""
+        ]
+      },
+      {
+        "file": "page.tsx",
+        "type": "page",
+        "patterns": []
+      },
+      {
+        "file": "contact/page.tsx",
+        "type": "page",
+        "patterns": [
+          "\"[^\"]*Ei ATS[^\"]*\"",
+          "\"[^\"]*registration[^\"]*\"",
+          "\"[^\"]*exam[^\"]*\""
+        ]
+      },
+      {
+        "file": "for-parents/page.tsx",
+        "type": "page",
+        "patterns": [
+          "\"[^\"]*Ei ATS[^\"]*\"",
+          "\"[^\"]*ASSET[^\"]*\"",
+          "\"[^\"]*Talent Search[^\"]*\"",
+          "\"[^\"]*registration[^\"]*\"",
+          "\"[^\"]*exam[^\"]*\"",
+          "\"[^\"]*eligibility[^\"]*\""
+        ]
+      },
+      {
+        "file": "for-schools/page.tsx",
+        "type": "page",
+        "patterns": [
+          "\"[^\"]*Ei ATS[^\"]*\"",
+          "\"[^\"]*ASSET[^\"]*\"",
+          "\"[^\"]*registration[^\"]*\"",
+          "\"[^\"]*eligibility[^\"]*\""
+        ]
+      },
+      {
+        "file": "programmes/page.tsx",
+        "type": "page",
+        "patterns": [
+          "\"[^\"]*Ei ATS[^\"]*\"",
+          "\"[^\"]*ASSET[^\"]*\"",
+          "\"[^\"]*Talent Search[^\"]*\"",
+          "\"[^\"]*Johns Hopkins[^\"]*\"",
+          "\"[^\"]*UC Berkeley[^\"]*\"",
+          "\"[^\"]*Northwestern[^\"]*\"",
+          "\"[^\"]*Purdue[^\"]*\"",
+          "\"[^\"]*SIG[^\"]*\"",
+          "\"[^\"]*GenWise[^\"]*\"",
+          "\"[^\"]*registration[^\"]*\"",
+          "\"[^\"]*eligibility[^\"]*\""
+        ]
+      },
+      {
+        "file": "resources/page.tsx",
+        "type": "page",
+        "patterns": [
+          "\"[^\"]*Ei ATS[^\"]*\"",
+          "\"[^\"]*ASSET[^\"]*\"",
+          "\"[^\"]*Talent Search[^\"]*\"",
+          "\"[^\"]*Johns Hopkins[^\"]*\"",
+          "\"[^\"]*UC Berkeley[^\"]*\"",
+          "\"[^\"]*Northwestern[^\"]*\"",
+          "\"[^\"]*Purdue[^\"]*\"",
+          "\"[^\"]*SIG[^\"]*\"",
+          "\"[^\"]*GenWise[^\"]*\"",
+          "\"[^\"]*registration[^\"]*\"",
+          "\"[^\"]*exam[^\"]*\"",
+          "\"[^\"]*fees[^\"]*\"",
+          "\"[^\"]*eligibility[^\"]*\""
+        ]
+      },
+      {
+        "file": "schedule-call/page.tsx",
+        "type": "page",
+        "patterns": [
+          "\"[^\"]*Ei ATS[^\"]*\"",
+          "\"[^\"]*ASSET[^\"]*\"",
+          "\"[^\"]*Talent Search[^\"]*\""
+        ]
+      }
+    ],
+    "recommendations": [
+      {
+        "priority": "HIGH",
+        "category": "Components",
+        "action": "Migrate components to use hybrid hooks",
+        "items": [
+          "srr-video-section.tsx",
+          "search-dialog.tsx",
+          "intelligent-chatbot.tsx",
+          "alumni-cta.tsx",
+          "giftedness-section.tsx",
+          "media-carousel.tsx",
+          "history-section.tsx",
+          "roadmap-section.tsx",
+          "giftedness-with-video.tsx",
+          "back-to-top.tsx",
+          "floating-chat.tsx"
+        ]
+      },
+      {
+        "priority": "MEDIUM",
+        "category": "Pages",
+        "action": "Migrate pages to use CMS content",
+        "items": [
+          "page.tsx",
+          "contact/page.tsx",
+          "for-parents/page.tsx",
+          "for-schools/page.tsx",
+          "for-students/page.tsx",
+          "programmes/page.tsx",
+          "resources/page.tsx",
+          "schedule-call/page.tsx"
+        ]
+      },
+      {
+        "priority": "HIGH",
+        "category": "Content",
+        "action": "Move hardcoded content to CMS",
+        "items": [
+          "hero-section.tsx",
+          "about-section.tsx",
+          "exam-info.tsx",
+          "testimonials-carousel.tsx",
+          "faq-section.tsx",
+          "contact-section.tsx",
+          "footer.tsx",
+          "header.tsx",
+          "notification-bar.tsx",
+          "partners-carousel.tsx",
+          "search-dialog.tsx",
+          "intelligent-chatbot.tsx",
+          "alumni-cta.tsx",
+          "media-carousel.tsx",
+          "history-section.tsx",
+          "page.tsx",
+          "contact/page.tsx",
+          "for-parents/page.tsx",
+          "for-schools/page.tsx",
+          "programmes/page.tsx",
+          "resources/page.tsx",
+          "schedule-call/page.tsx"
+        ]
+      },
+      {
+        "priority": "MEDIUM",
+        "category": "Cleanup",
+        "action": "Remove legacy content hooks",
+        "items": [
+          "useContent()",
+          "useHeroContent()",
+          "useExamContent()",
+          "useTestimonialsContent()",
+          "useFAQContent()",
+          "useContactContent()",
+          "useFooterContent()",
+          "useNavigationContent()",
+          "useNotificationsContent()",
+          "useProgramsContent()",
+          "useRewardsContent()"
+        ]
+      }
+    ],
+    "risks": [
+      {
+        "level": "HIGH",
+        "issue": "Components without content hooks",
+        "impact": "Content cannot be managed through CMS",
+        "components": [
+          "srr-video-section.tsx",
+          "search-dialog.tsx",
+          "intelligent-chatbot.tsx",
+          "alumni-cta.tsx",
+          "giftedness-section.tsx",
+          "media-carousel.tsx",
+          "history-section.tsx",
+          "roadmap-section.tsx",
+          "giftedness-with-video.tsx",
+          "back-to-top.tsx",
+          "floating-chat.tsx"
+        ]
+      },
+      {
+        "level": "HIGH",
+        "issue": "Hardcoded content found",
+        "impact": "Content cannot be updated without code changes",
+        "files": [
+          "hero-section.tsx",
+          "about-section.tsx",
+          "exam-info.tsx",
+          "testimonials-carousel.tsx",
+          "faq-section.tsx",
+          "contact-section.tsx",
+          "footer.tsx",
+          "header.tsx",
+          "notification-bar.tsx",
+          "partners-carousel.tsx",
+          "search-dialog.tsx",
+          "intelligent-chatbot.tsx",
+          "alumni-cta.tsx",
+          "media-carousel.tsx",
+          "history-section.tsx",
+          "page.tsx",
+          "contact/page.tsx",
+          "for-parents/page.tsx",
+          "for-schools/page.tsx",
+          "programmes/page.tsx",
+          "resources/page.tsx",
+          "schedule-call/page.tsx"
+        ]
+      },
+      {
+        "level": "MEDIUM",
+        "issue": "Legacy hooks still in use",
+        "impact": "Potential server/client errors and maintenance issues",
+        "hooks": [
+          "useContent()",
+          "useHeroContent()",
+          "useExamContent()",
+          "useTestimonialsContent()",
+          "useFAQContent()",
+          "useContactContent()",
+          "useFooterContent()",
+          "useNavigationContent()",
+          "useNotificationsContent()",
+          "useProgramsContent()",
+          "useRewardsContent()"
+        ]
+      }
+    ]
+  },
+  "recommendations": [
+    {
+      "priority": "HIGH",
+      "category": "Components",
+      "action": "Migrate components to use hybrid hooks",
+      "items": [
+        "srr-video-section.tsx",
+        "search-dialog.tsx",
+        "intelligent-chatbot.tsx",
+        "alumni-cta.tsx",
+        "giftedness-section.tsx",
+        "media-carousel.tsx",
+        "history-section.tsx",
+        "roadmap-section.tsx",
+        "giftedness-with-video.tsx",
+        "back-to-top.tsx",
+        "floating-chat.tsx"
+      ]
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "Pages",
+      "action": "Migrate pages to use CMS content",
+      "items": [
+        "page.tsx",
+        "contact/page.tsx",
+        "for-parents/page.tsx",
+        "for-schools/page.tsx",
+        "for-students/page.tsx",
+        "programmes/page.tsx",
+        "resources/page.tsx",
+        "schedule-call/page.tsx"
+      ]
+    },
+    {
+      "priority": "HIGH",
+      "category": "Content",
+      "action": "Move hardcoded content to CMS",
+      "items": [
+        "hero-section.tsx",
+        "about-section.tsx",
+        "exam-info.tsx",
+        "testimonials-carousel.tsx",
+        "faq-section.tsx",
+        "contact-section.tsx",
+        "footer.tsx",
+        "header.tsx",
+        "notification-bar.tsx",
+        "partners-carousel.tsx",
+        "search-dialog.tsx",
+        "intelligent-chatbot.tsx",
+        "alumni-cta.tsx",
+        "media-carousel.tsx",
+        "history-section.tsx",
+        "page.tsx",
+        "contact/page.tsx",
+        "for-parents/page.tsx",
+        "for-schools/page.tsx",
+        "programmes/page.tsx",
+        "resources/page.tsx",
+        "schedule-call/page.tsx"
+      ]
+    },
+    {
+      "priority": "MEDIUM",
+      "category": "Cleanup",
+      "action": "Remove legacy content hooks",
+      "items": [
+        "useContent()",
+        "useHeroContent()",
+        "useExamContent()",
+        "useTestimonialsContent()",
+        "useFAQContent()",
+        "useContactContent()",
+        "useFooterContent()",
+        "useNavigationContent()",
+        "useNotificationsContent()",
+        "useProgramsContent()",
+        "useRewardsContent()"
+      ]
+    }
+  ],
+  "risks": [
+    {
+      "level": "HIGH",
+      "issue": "Components without content hooks",
+      "impact": "Content cannot be managed through CMS",
+      "components": [
+        "srr-video-section.tsx",
+        "search-dialog.tsx",
+        "intelligent-chatbot.tsx",
+        "alumni-cta.tsx",
+        "giftedness-section.tsx",
+        "media-carousel.tsx",
+        "history-section.tsx",
+        "roadmap-section.tsx",
+        "giftedness-with-video.tsx",
+        "back-to-top.tsx",
+        "floating-chat.tsx"
+      ]
+    },
+    {
+      "level": "HIGH",
+      "issue": "Hardcoded content found",
+      "impact": "Content cannot be updated without code changes",
+      "files": [
+        "hero-section.tsx",
+        "about-section.tsx",
+        "exam-info.tsx",
+        "testimonials-carousel.tsx",
+        "faq-section.tsx",
+        "contact-section.tsx",
+        "footer.tsx",
+        "header.tsx",
+        "notification-bar.tsx",
+        "partners-carousel.tsx",
+        "search-dialog.tsx",
+        "intelligent-chatbot.tsx",
+        "alumni-cta.tsx",
+        "media-carousel.tsx",
+        "history-section.tsx",
+        "page.tsx",
+        "contact/page.tsx",
+        "for-parents/page.tsx",
+        "for-schools/page.tsx",
+        "programmes/page.tsx",
+        "resources/page.tsx",
+        "schedule-call/page.tsx"
+      ]
+    },
+    {
+      "level": "MEDIUM",
+      "issue": "Legacy hooks still in use",
+      "impact": "Potential server/client errors and maintenance issues",
+      "hooks": [
+        "useContent()",
+        "useHeroContent()",
+        "useExamContent()",
+        "useTestimonialsContent()",
+        "useFAQContent()",
+        "useContactContent()",
+        "useFooterContent()",
+        "useNavigationContent()",
+        "useNotificationsContent()",
+        "useProgramsContent()",
+        "useRewardsContent()"
+      ]
+    }
+  ]
+}
